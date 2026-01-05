@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Focus Transition Example</title>
+    <style>
+        /* Style for text input */
+        input[type="text"] {
+            border: 1px solid gray;               
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+
+            /* transition for border-color and transform */
+            transition: border-color 0.4s ease,
+                        transform 0.4s ease;
+        }
+
+        /* Focus pseudo-class */
+        input[type="text"]:focus {
+            border-color: brightgreen;              
+            transform: rotate(1deg);                
+        }
+    </style>
+</head>
+<body>
+
+<h2>Text Input with Focus Effect</h2>
+
+<input type="text" placeholder="Click to focus">
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        .box {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2 id="title">Original Title</h2>
+
+<p class="box">This is original paragraph text.</p>
+
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+    function changeContent() {
+
+        //  Using getElementById()
+        document.getElementById("title").innerHTML =
+            "Title changed using getElementById()";
+
+        //  Using querySelector() with class
+        document.querySelector(".box").innerHTML =
+            "Paragraph updated using querySelector()";
+    }
+</script>
+
+</body>
+</html>

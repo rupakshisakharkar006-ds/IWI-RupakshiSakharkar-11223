@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Function & Scope Demo</title>
+</head>
+<body>
+
+<h2>JavaScript User Defined Function and Scope</h2>
+
+<p id="output"></p>
+
+<script>
+    // Global scope variables
+    var globalVar = "I am global (var)";
+    let globalLet = "I am global (let)";
+    const globalConst = "I am global (const)";
+
+    // User-defined function
+    function scopeDemo() {
+
+        // Function scope
+        var functionVar = "Function scope (var)";
+        let functionLet = "Function scope (let)";
+        const functionConst = "Function scope (const)";
+
+        // Block scope
+        if (true) {
+            var blockVar = "Block scope? (var)";
+            let blockLet = "Block scope (let)";
+            const blockConst = "Block scope (const)";
+        }
+
+        document.getElementById("output").innerHTML =
+            globalVar + "<br>" +
+            globalLet + "<br>" +
+            globalConst + "<br><br>" +
+
+            functionVar + "<br>" +
+            functionLet + "<br>" +
+            functionConst + "<br><br>" +
+
+            blockVar + "<br>";   // Accessible because var is NOT block scoped
+
+        // blockLet and blockConst are NOT accessible here
+    }
+
+    // Invoke (call) the user-defined function
+    scopeDemo();
+</script>
+
+</body>
+</html>

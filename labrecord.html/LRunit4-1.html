@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show / Hide & Toggle CSS Class</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .highlight {
+            color: black;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Show / Hide & Toggle Class Demo</h2>
+
+<p id="text">This text can be shown or hidden.</p>
+
+<button onclick="toggleText()">Show / Hide Text</button>
+<button onclick="toggleStyle()">Toggle Highlight</button>
+
+<script>
+    function toggleText() {
+        let element = document.getElementById("text");
+
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+
+    function toggleStyle() {
+        let element = document.getElementById("text");
+        element.classList.toggle("highlight");
+    }
+</script>
+
+</body>
+</html>

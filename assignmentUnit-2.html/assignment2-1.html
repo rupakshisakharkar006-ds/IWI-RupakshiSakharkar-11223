@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model & Inline-Block Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Box model demonstration */
+        .box {
+            display: inline-block;          
+            width: 200px;
+            height: 120px;
+            padding: 20px;                  
+            border: 4px solid hwb(0 6% 93% / 0.873);         
+            margin: 15px;                   
+            background-color: #ec6bd5;      
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>CSS Box Model & Inline-Block</h2>
+
+<div class="box">
+    <span class="label">Box 1</span>
+    Content Area
+</div>
+
+<div class="box">
+    <span class="label">Box 2</span>
+    Padding + Border + Margin
+</div>
+
+<div class="box">
+    <span class="label">Box 3</span>
+    Inline-Block Layout
+</div>
+
+</body>
+</html>

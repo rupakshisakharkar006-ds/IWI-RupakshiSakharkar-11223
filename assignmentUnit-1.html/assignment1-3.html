@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 300px;
+            padding: 8px;
+            border: 1px soild #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Information Form</h2>
+
+    <form action="#" method="POST">
+
+        <div class="from group">
+            <label for="name">NAME:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" style="display: inline;">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" style="display: inline;">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other" style="display: inline;">Other</label><br>
+       </div>
+
+       <div class="form-grpup">
+            <label for="subject">Favorite Subject</label>
+            <select id="subject" name="subject">
+                <option value="">--Select a subject--</option>
+                <option value="Maths">Maths</option>
+                <option value="PFC">PFC</option>
+                <option value="IWI">IWI</option>
+                <option value="DL">DL</option>
+                <option value="programming">Programming</option>
+            </select>
+       </div>
+
+       <div class="form-group">
+           <label for="comments">Comments:</label>
+           <textarea id="comments" name="comments" rows="4"></textarea>
+       </div>
+
+       <div class="form-group">
+            <button type="submit">Submit</button>
+       </div>
+
+        
+    </form>
+</body>
+</html>

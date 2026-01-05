@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation using JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name: <br>
+    <input type="text" id="name" oninput="checkName()"><br>
+
+    Email: <br>
+    <input type="text" id="email" oninput="checkEmail()"><br>
+
+    Password: <br>
+    <input type="password" id="password" oninput="checkPassword()"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    // oninput validation for name
+    function checkName() {
+        let name = document.getElementById("name").value;
+        if (name.length < 3) {
+            alert("Name must be at least 3 characters long");
+        }
+    }
+
+    // oninput validation for email
+    function checkEmail() {
+        let email = document.getElementById("email").value;
+        if (!email.includes("@")) {
+            alert("Email must contain @ symbol");
+        }
+    }
+
+    // oninput validation for password
+    function checkPassword() {
+        let password = document.getElementById("password").value;
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters");
+        }
+    }
+
+    // onsubmit validation
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (name === "" || email === "" || password === "") {
+            alert("All fields are required!");
+            return false;   // prevents form submission
+        }
+
+        alert("Form submitted successfully!");
+        return true;        // allows form submission
+    }
+</script>
+
+</body>
+</html>

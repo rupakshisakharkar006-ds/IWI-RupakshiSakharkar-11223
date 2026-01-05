@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge Arrays using Spread Operator</title>
+</head>
+<body>
+
+<h2>Merge Two Arrays</h2>
+<p id="output"></p>
+
+<script>
+    
+    const array1 = [34, 7, 29];
+    const array2 = [98, 0, 1];
+
+    const mergedArray = [...array1, ...array2];
+
+     document.getElementById("output").innerHTML =
+        "Merged Array: " + mergedArray;
+</script>
+
+</body>
+</html>

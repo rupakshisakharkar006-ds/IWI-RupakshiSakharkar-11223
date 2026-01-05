@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IsEven Arrow Function</title>
+</head>
+<body>
+
+<h2>Check Even Number</h2>
+<p id="result"></p>
+
+<script>
+    
+    const IsEven = (num) => {
+        return num % 2 === 0;
+    };
+
+     let number = 34;
+
+    document.getElementById("result").innerHTML =
+        number + " is even: " + IsEven(number);
+</script>
+
+</body>
+</html>

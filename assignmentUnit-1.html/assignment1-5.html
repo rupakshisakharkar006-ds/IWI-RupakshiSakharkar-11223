@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Embedding Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .media-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        video, audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML5 Media Embedding</h1>
+
+    <div class="media-container">
+        <h2>Embedded Video (MP4)</h2>
+        <video controls>
+            <source scr="C:\Users\HP\Downloads\videoframe_10596.png.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media-container">
+        <h2>Embedded Audio (MP3)</h2>
+        <audio controls>
+            <source scr="C:\Users\HP\Downloads\Instagram.html.mp3" type="audio/mpeg">
+            Your browser does not suppoet the audio tag.
+        </audio>
+    </div>
+</body>
+</html>
